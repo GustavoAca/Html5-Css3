@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+p {
+  text-align: justify;
+  text-indent: 50px;
+}
+
+#ftp {
+  top 0;
+  width: 10%;
+  
+}
+
+#editor_php {
+  width: 50%;
+  height: 80%;
+}
+
+h3,h2 {
+  color: blue;
+}
+#parag {
+  border: solid;
+  padding: 5px 0 5px 10px;
+}
