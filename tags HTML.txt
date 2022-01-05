@@ -1,0 +1,247 @@
+							Tags HTML5
+==========================================================================================================================
+
+lang="" -- Idioma do site
+==========================================================================================================================
+
+metAcharset="" -- UTF8 pra idiomas latinos
+==========================================================================================================================
+
+div == Divisão da tela
+==========================================================================================================================
+
+header -- Cabeçalho
+==========================================================================================================================
+
+hgroup -- grupos de Hs(h1,h2,h3...)
+==========================================================================================================================
+
+&shy -- Divisão da palavra com traço
+wbr - Divisão da palavra sem traço
+&copy - Simbolo de copyrate
+==========================================================================================================================
+
+<em></> -- inclina a palavra como o <i></> e dá enfase para os navegadores entenderem a palavra
+<del></> -- substitui a tag <s>
+==========================================================================================================================
+
+<span></> usado pra editat pequenos textos (<span style="text-decoration: underline">Google Glass</span>) -- usado para sublinhar o texto
+==========================================================================================================================
+
+<span style="font-weight: bolder/(de 400 a 900)">Google Glass</span>-- usado pra controlar o negrito
+
+
+<styele="text align:right"> -- alinha o texto
+
+==========================================================================================================================
+
+ <p>x<sup>2</sup> e h<sub> 2</sub> O</p> -- SUP é um texto supreposto e sub um  texto sobreposto
+==========================================================================================================================
+
+<code></>-- indica uma area de codigo
+
+ <pre>--tag de pre formatação
+            <code>
+                #include &lt;iostream&gt;
+                int main(){
+                    cout <<"olá,mundo";
+                return 0;
+                }
+            </code>
+        </pre>
+==========================================================================================================================
+	COR
+==========================================================================================================================
+
+background-color:rgb(35, 137,195) ; -- mudar cores por rgb e  hexadecimal
+ background-color:#551133 ;
+ background-image: url("depositphotos_47668689-stock-photo-steel-brushed-metal-surface-background.jpg"); -- background com fundo de imagem.
+ color:rgba(0,0,0,0.1) ; -- rgba traás a opção de transparência
+background-color: hsla(165,81%,93%,0.5); -- trabalhando com hsl,e com o hsla
+
+==========================================================================================================================
+Imagem	
+==========================================================================================================================
+
+<figure>/>
+	valor semantico para visualização e bsuca
+	<figcaption>/> legenda com titulos ou sem
+
+
+border:8px solid white;
+    box-shadow:  1px 1px 4px black; --- borda na imagem com sombra
+
+
+figure.foto-legenda figcaption{
+    position:absolute;
+    top: 0px; == mudando o figcapiont deixando posição absoluta dentro do quadrado 
+
+adicionar position:relative em pai(ex . figure.foto-legenda)
+
+  position:absolute;
+    opacy: 0% -- deixa a legenda invisivel
+    top: 0px;
+    background-color: rgba(0,0,0,0.4); da transparencia a fundo encima da imagem,deixcando um fundo e a imagem por tras
+    color:white; -- cor da letr
+    width: 100%; -- tamanho do contorno
+    height: 100%; -- altura do contorno
+    padding: 10px; -- da espaço no texto
+    box-sizing: border-box; -- deixa o contorno alinahado com a imagem dando uma caixa de contorno
+    transition: opacity 1s; -- faz transação de 1 segundo para mostrar o texto ocasionado em hover
+} -- edicaçãoda imagem
+
+figure.foto-legenda:hover figcaption{
+    opacity: 1;
+} -- ligado ao de cima, comando hover faz a opacity mudar quando o mouse passar por cima
+
+<nav>  semantica para menu de navegação
+==========================================================================================================================
+css
+
+ <link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+==========================================================================================================================
+
+	Listas
+==========================================================================================================================
+ordened list - 
+==============================================================
+<ol>/>	
+ <ol type="1" start="3">--type(a A 1 I i,respectivamente, alfabetica minuscula,alfabetica maiuscula,numerada,algarismo romano grande e o pequenos)
+ start--inica a lista por numero 3,ou letra c,ou algarismo 3 romano.
+                <li> Home</li>
+                <li>Especificações</li>
+                <li>Fotos</li>
+                <li>Multimídia</li>
+                <li>Fale conosco</li>
+            </ol>
+
+e ul
+
+============================================================
+Menu
+==============================================================
+
+nav#menu{
+    display: block;--prende a area de menu
+}
+
+nav#menu ul{
+    list-style: none; -- tira o circulo da lista
+    text-transform: uppercase; -- deixa todas letras maiusculas
+    position: absolute; -- declara a posição
+    top:-20px; -- deixa a lista colada no inicio da tela
+    left: 600px; -- arrasta para o canto
+
+}
+nav#menu h1{
+    display:none; -- oculta o titulo menu
+}
+nav#menu li{
+    display: inline-block;-- um do lado do outro no menu
+    background-color: #dddddd; -- cor cinza
+    padding: 10px; -- coloca a distancia da letra pra borda
+    margin: 2px -- coloca a distancia entre itens do menu
+}
+
+==============================================================
+efeitos visuais
+==============================================================
+
+http://expressprefixr.herokuapp.com/ -- site para fazer um css atual funcionar em navegadores mais velhos, como no caso de transition que não é efetivado em navegadores antigos
+
+nav#menu a{
+    color: black;
+    text-decoration:none; -- tira a sublinhação do texto
+}
+
+nav#menu a:hover{  -- quando passar o mouse encima do menu ele muda
+    color:white;
+    text-decoration: underline; -- e fica com uma linha
+}
+
+div#interface{
+    width: 400px;
+    background-color: #ffffff;
+    margin:-20px auto 0 auto;-- "auto regulariza automaticamente" margim configura a centralização por bordas,começando a edição de cima,direita,baixo e esquerda
+}
+==============================================================
+Cabeçalho
+==============================================================
+
+background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 100px; -- fundo é a imagem logo, sem repetições, com deslocamento lateral(0px) e deslocamento vertical(100px)
+
+==============================================================
+fontes
+==============================================================
+
+https://fonts.google.com/
+
+@import url('https://fonts.googleapis.com/css2? family = Glory: wght @ 100 & display = swap');
+
+font-family: 'Glory', sans-serif;
+
+
+==============================================================
+semantico 
+==============================================================
+
+section--dvide o corpo
+aside-- divide a lateral
+footer--rodape
+
+float
+
+section#corpo{
+    display:block;--divide em bloco
+    width: 520px;--tamanaho do texto
+    float: left;--joga ele pra esquerda
+    border-right: 1px solid #606060; -- define borda
+    padding-right: 15px;-- distancia do texto para a borda
+}
+
+aside#lateral{
+    display: block;
+    width: 350px;
+    float :right; -- flutuante para direita
+}
+
+footer#rodape{
+    clear:both; -- limpa o conteudo e organiza o corpo e a lateral
+    border-top:1px solid #606060;
+
+}
+======================================================================================================
+tabela
+
+<caption></caption>
+<tr> em cada linha</tr>
+<tr> linha e <td> dado na linha</td>
+
+
+table#tabelaspec{
+    border:1px solid #606060; // da contorno na tabela em geral
+    border-spacing: 0px; //configura a borda pra ficar sem espaço entre as bordas
+}
+table#tabelaspec td{
+    border: 1px  solid #606060;// da contordo a borda de td
+	 padding:10px ;//esaço interno nas celulas
+}
+
+//rowspan="2" comando faz a celula ter 2 linhas (camera, usando duas linhas)
+
+  <tr><td colspan="2">Linha extra</td></tr> // faz a palvra pelagar duas colunas
+
+  text-align: center;//alinhamento de texto horizontal
+    vertical-align: bottom;//alinhamento vertical, bottom,center,middle
+
+ ==============================================
+ interface
+ ===============================================
+ <article></article>
+
+==============================================================
+<a href="mailto:galasdalas50@gmail.com"
+<a href="tellto
+
+timepng.com
+site para otimizar imagem
