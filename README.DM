@@ -1,5 +1,5 @@
 
-# Olá,bem vindo ao meu repositório :stuck_out_tongue:
+# Olá,bem vindo ao meu repositório 
 
 
 
